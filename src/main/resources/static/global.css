@@ -2,6 +2,7 @@ body{
     padding: 2rem;
     max-width: 1500px;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .grid{
@@ -32,6 +33,11 @@ body{
     .grid{
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 
