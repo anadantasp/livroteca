@@ -34,7 +34,10 @@
           </div>
           <div class="col-md-1">
             <button type="button" class="btn btn-primary">Atualizar</button>
-            <a th:href="${'/livros/admin/delete/' + livro.id}" class="btn btn-danger">Deletar</a>
+            <form th:action="${'/livros/admin/' + livro.id}" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <button>Deletar</button>
+            </form>
           </div>
         </div>
     </div>

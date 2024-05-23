@@ -14,14 +14,16 @@
     <h1>Epic Task</h1>
     <h2>Livros disponíveis</h2>
 
-    <form action="/livros/admin" class=" container-sm border border-primary" method="POST">
+    <form action="/livros/admin" class=" container-sm border border-primary" method="POST" th:object="${livro}">
         <div>
             <label for="titulo" class="form-label">Título</label>
-            <input name="titulo" type="text" class="form-control" id="titulo" >
+            <input th:field="*{titulo}"  type="text" class="form-control" >
+            <span th:errors="*{titulo}"></span>
           </div>
           <div>
             <label for="descricao" class="form-label">descricao</label>
-            <textarea name="descricao" class="form-control" id="descricao" rows="5"></textarea>
+            <textarea th:field="*{descricao}"  class="form-control"  rows="5"></textarea>
+            <span th:errors="*{descricao}"></span>
           </div>
           <a href="/livros/admin" class="btn btn-light">cancelar</a>
           <input type="submit" class="btn btn-primary" value="cadastrar" />
